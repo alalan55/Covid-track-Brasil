@@ -1,0 +1,59 @@
+<div class="elements">
+<div class="row" *ngIf="info$ |async let c ">
+
+    <div class="col-sm-4">
+      <div class="card">
+        <div class="card-header totCasos"></div>
+        <div class="card-body">
+          <h5 class="display-4">Total de casos</h5>
+          <p class="lead"><strong>{{c.cases | number }}  </strong></p>
+          
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-4">
+        <div class="card">
+            <div class="card-header todCasos"></div>
+          <div class="card-body">
+            <h5 class="display-4">Casos hoje</h5>
+            <p class="lead"><strong>{{c.todayCases | number }} </strong></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-4">
+        <div class="card">
+            <div class="card-header totMortes"></div>
+          <div class="card-body">
+            <h5 class="display-4">Total de Mortes</h5>
+            <p class="lead"><strong>{{c.deaths | number }} </strong></p>
+          </div>
+        </div>
+      </div>
+  
+  </div>
+
+  <div class="row" *ngIf="info$ |async let c">
+
+    <div class="col">
+        <div class="card">
+            <div class="card-header totRecuperados"></div>
+          <div class="card-body">
+            <h5 class="display-4">Recuperados</h5>
+            <p class="lead"><strong>{{c.recovered | number }} </strong></p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+            <div class="card-header totTestados"></div>
+          <div class="card-body">
+            <h5 class="display-4">Testados</h5>
+            <p class="lead"><strong>{{c.totalTests | number }} </strong></p>
+          </div>
+        </div>
+      </div>
+
+  </div>
+</div>
